@@ -5,6 +5,7 @@ sudo pacman -S --noconfirm --needed \
   alsa-utils \
   colord \
   power-profiles-daemon \
+  keppassxc \
   asdcontrol-git \
   alacritty \
   avahi \
