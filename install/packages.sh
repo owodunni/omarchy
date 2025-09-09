@@ -1,8 +1,7 @@
 #!/bin/bash
 
 sudo pacman -S --noconfirm --needed \
-  1password-beta \
-  1password-cli \
+  easyeffects \
   asdcontrol-git \
   alacritty \
   avahi \
