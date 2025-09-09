@@ -2,6 +2,7 @@
 
 sudo pacman -S --noconfirm --needed \
   easyeffects \
+  power-profiles-daemon \
   asdcontrol-git \
   alacritty \
   avahi \

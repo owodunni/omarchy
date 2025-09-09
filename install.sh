@@ -54,5 +54,8 @@ source $OMARCHY_INSTALL/login/plymouth.sh
 source $OMARCHY_INSTALL/login/limine-snapper.sh
 source $OMARCHY_INSTALL/login/alt-bootloaders.sh
 
+# Power
+source $OMARCHY_INSTALL/power.sh
+
 # Finishing
 source $OMARCHY_INSTALL/reboot.sh
