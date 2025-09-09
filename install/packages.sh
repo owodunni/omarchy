@@ -2,6 +2,8 @@
 
 sudo pacman -S --noconfirm --needed \
   easyeffects \
+  alsa-utils \
+  colord \
   power-profiles-daemon \
   asdcontrol-git \
   alacritty \
