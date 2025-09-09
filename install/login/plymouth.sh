@@ -151,3 +151,43 @@ fi
 if ! systemctl is-enabled getty@tty1.service | grep -q disabled; then
   sudo systemctl disable getty@tty1.service
 fi
+
+if [ ! -f /etc/systemd/system/ath11k-suspend.service ]; then
+  cat <<EOF | sudo tee /etc/systemd/system/ath11k-suspend.service
+[Unit]
+Description=Suspend: rmmod ath11k_pci
+Before=sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/rmmod ath11k_pci
+
+[Install]
+WantedBy=sleep.target
+EOF
+fi
+
+if [ ! -f /etc/systemd/system/ath11k-resume.service ]; then
+  cat <<EOF | sudo tee /etc/systemd/system/ath11k-resume.service
+[Unit]
+Description=Resume: modprobe ath11k_pci
+After=suspend.target suspend-then-hibernate.target hibernate.target hybrid-sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/modprobe ath11k_pci
+
+[Install]
+WantedBy=suspend.target suspend-then-hibernate.target hibernate.target hybrid-sleep.target
+EOF
+fi
+
+# Enable ath11k-resume.service only if not already disabled
+if ! systemctl is-enabled ath11k-resume.service | grep -q enabled; then
+  sudo systemctl enable ath11k-resume.service
+fi
+
+# Enable ath11k-suspend.service only if not already disabled
+if ! systemctl is-enabled ath11k-suspend.service | grep -q enabled; then
+  sudo systemctl enable ath11k-suspend.service
+fi
