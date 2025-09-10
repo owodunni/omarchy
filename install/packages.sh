@@ -6,6 +6,7 @@ sudo pacman -S --noconfirm --needed \
   colord \
   power-profiles-daemon \
   keppassxc \
+  linux-headers \
   asdcontrol-git \
   alacritty \
   avahi \

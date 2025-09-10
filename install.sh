@@ -57,5 +57,8 @@ source $OMARCHY_INSTALL/login/alt-bootloaders.sh
 # Power
 source $OMARCHY_INSTALL/power.sh
 
+# Display
+source $OMARCHY_INSTALL/display.sh
+
 # Finishing
 source $OMARCHY_INSTALL/reboot.sh
