@@ -7,6 +7,7 @@ sudo pacman -S --noconfirm --needed \
   power-profiles-daemon \
   keppassxc \
   linux-headers \
+  nss \
   asdcontrol-git \
   alacritty \
   avahi \

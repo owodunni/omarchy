@@ -60,5 +60,8 @@ source $OMARCHY_INSTALL/power.sh
 # Display
 source $OMARCHY_INSTALL/display.sh
 
+# Certificates
+source $OMARCHY_INSTALL/certificates.sh
+
 # Finishing
 source $OMARCHY_INSTALL/reboot.sh
