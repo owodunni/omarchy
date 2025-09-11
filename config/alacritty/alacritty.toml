@@ -16,5 +16,8 @@ decorations = "None"
 
 [keyboard]
 bindings = [
-{ key = "F11", action = "ToggleFullscreen" }
+{ key = "F11", action = "ToggleFullscreen" },
+# Mac-like keyboard shortcuts for terminal
+{ key = "C", mods = "Super", action = "Copy" },
+{ key = "V", mods = "Super", action = "Paste" },
 ]
