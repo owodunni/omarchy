@@ -8,6 +8,7 @@ sudo pacman -S --noconfirm --needed \
   keppassxc \
   linux-headers \
   nss \
+  keyd \
   asdcontrol-git \
   alacritty \
   avahi \
