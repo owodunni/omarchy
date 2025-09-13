@@ -9,6 +9,7 @@ sudo pacman -S --noconfirm --needed \
   linux-headers \
   nss \
   keyd \
+  go \
   asdcontrol-git \
   alacritty \
   avahi \
