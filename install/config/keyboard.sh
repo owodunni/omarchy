@@ -11,21 +11,11 @@ if [ ! -f /etc/keyd/default.conf ]; then
 
 # Maps capslock to backslash
 capslock = backslash
-
-[meta]
-
-# Mac-like key bindings: Super + key -> Ctrl + key
-c = C-c
-v = C-v
-a = C-a
-z = C-z
-x = C-x
-f = C-f
 EOF
 fi
 
-if ! groups $USER | grep -q keyd; then
-  usermod -aG keyd $USER
+if ! groups "$USER" | grep -q keyd; then
+  usermod -aG keyd "$USER"
   echo "Added $USER to keyd group."
 fi
 
